@@ -23,7 +23,7 @@ function CalculatorNumber()
     this.receiveIntegerDigit = function receiveIntegerDigit( receiveDecimalDigit )
     {
         this.insertingIntegerDigit = receiveDecimalDigit;
-    }
+    };
 
     this.addLeastSignificantDigit = function addLeastSignificantDigit( digit )
     {
@@ -35,12 +35,12 @@ function CalculatorNumber()
         {
             this.addDecimalLeastSignificantDigit( digit );
         }
-    }
+    };
 
     this.addIntegerLeastSignificantDigit = function addIntegerLSD( integerLeastSignificantDigit )
     {
         this.totalNumber = this.totalNumber * 10 + integerLeastSignificantDigit;
-    }
+    };
 
     this.addDecimalLeastSignificantDigit = function addDecimalLSD( decimalLeastSignificantDigit )
     {
@@ -49,7 +49,7 @@ function CalculatorNumber()
         this.totalNumber += decimalToBeAdded;
 
         this.lastDecimalDigitPosition++;
-    }
+    };
 
     this.getNumber = function getNumber()
     {
