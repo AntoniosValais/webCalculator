@@ -5,16 +5,15 @@
 var operationOrder = ['*','/','+','-'];
 var insertedExpression = [];
 var insertedExpressionIndex = -1;
-var number = new Number();
+var number = new CalculatorNumber();
 
 function clearExpression()
 {
     insertedExpression = [];
     insertedExpressionIndex = -1;
-    number = new Number();
+    number = new CalculatorNumber();
 }
-
-function Number()
+function CalculatorNumber()
 {
     this.totalNumber = 0.0;
     this.insertingIntegerDigit = true;
@@ -72,7 +71,7 @@ function compute( argument1, argument2, operation )
 
             if( argument2 == 0 )
             {
-                return Math.POSITIVE_INFINITY;
+                return Number.POSITIVE_INFINITY;
             }
             else
             {
@@ -102,25 +101,32 @@ function getExpressionResult()
 
     var argument1, argument2;
 
-    for( operationIndex = 0; operationIndex < operationOrder.length; operationIndex++ )
-{
-    var operation = operationOrder[ operationIndex ];
-
-    for( element = 0; element < insertedExpression.length; element++ )
+    outterLoop:  for( operationIndex = 0; operationIndex < operationOrder.length; operationIndex++ )
     {
-        if( insertedExpression[ element ] == operation )
+        var operation = operationOrder[ operationIndex ];
+
+        for( element = 0; element < insertedExpression.length; element++ )
         {
-            argument1 = insertedExpression[ element - 1 ];
-            argument2 = insertedExpression[ element + 1 ];
+            if( insertedExpression[ element ] == operation )
+            {
+                argument1 = insertedExpression[ element - 1 ];
+                argument2 = insertedExpression[ element + 1 ];
 
-            var result = compute( argument1, argument2, operation );
+                var result = compute( argument1, argument2, operation );
 
-            insertedExpression.splice( (element-1), 3, result );
+                if( result == Number.POSITIVE_INFINITY )
+                {
+                    insertedExpression = [];
+                    insertedExpression[0] = result;
+                    break outterLoop;
+                }
 
-            element--;
+                insertedExpression.splice( (element-1), 3, result );
+
+                element--;
+            }
         }
     }
-}
 
     return insertedExpression[0];
 }
@@ -170,7 +176,7 @@ function newInput(element)
         case '/':
         case '+':
         case '-':
-            number = new Number();
+            number = new CalculatorNumber();
 
             insertedExpression[ ++insertedExpressionIndex ] = input;
             break;
