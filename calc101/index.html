@@ -9,28 +9,28 @@
     <body>
         <div id="main_container">
             <form name="Calc">
-                <div id="buttons">
-
-                    <div id="screen"></div> <br /><br /><br />
-                    <input type="text" name="Screen"> <br /><br />
-                    <span onClick="newinput(7)">7</span>
-                    <span onClick="newinput(8)">8</span>
-                    <span onClick="newinput(9)">9</span>
-                    <span onClick="newinput('+')">+</span> <br /><br /><br />
-                    <span onClick="newinput(4)">4</span>
-                    <span onClick="newinput(5)">5</span>
-                    <span onClick="newinput(6)">6</span>
-                    <span onClick="newinput('-')">-</span> <br /><br /><br />
-                    <span onClick="newinput(1)">1</span>
-                    <span onClick="newinput(2)">2</span>
-                    <span onClick="newinput(3)">3</span>
-                    <span onClick="newinput('*')">*</span> <br /><br /><br />
-                    <span onClick="newinput('C')">C</span>
-                    <span onClick="newinput(0)">0</span>
-                    <span>.</span>
-                    <span onClick="newinput('/')">/</span> <br /><br /><br />
-                    <div id="equals" onClick="newinput('=')">=</div><br /><br /><br />
-                </div>
+                    <div id="inner_container">
+                        <div id="screen"></div> <br /><br /><br />
+                        <div id="button_container">
+                            <span onClick="input(7)">7</span>
+                            <span onClick="input(8)">8</span>
+                            <span onClick="input(9)">9</span>
+                            <span class="operator" onClick="input('+')">+</span>  <br /><br /><br />
+                            <span onClick="input(4)">4</span>
+                            <span onClick="input(5)">5</span>
+                            <span onClick="input(6)">6</span>
+                            <span class="operator" onClick="input('-')">-</span>     <br /><br /><br />
+                            <span onClick="input(1)">1</span>
+                            <span onClick="input(2)">2</span>
+                            <span onClick="input(3)">3</span>
+                            <span class="operator" onClick="input('*')">*</span>     <br /><br />
+                            <span class="clear" onClick="input('C')">C</span>
+                            <span onClick="input(0)">0</span>
+                            <span>.</span>
+                            <span class="operator" onClick="input('/')">/</span> <br /><br /><br />
+                            <div id="equals" onClick="input('=')">=</div><br /><br /><br />
+                        </div>
+                    </div>
 
             </form>
         </div>
