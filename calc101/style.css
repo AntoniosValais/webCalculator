@@ -62,7 +62,12 @@ html{
 }
 #expand{
     position:relative;
-    left: 58px; !important
+    left: 58px;
+}
+#shorten{
+    position:relative;
+    left: 58px;
+    display: none;
 }
 #button_container{
     background-color:#2a508b;

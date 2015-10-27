@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <script src="jscalc.js" type="text/javascript" type="text/javascript"></script>
+        <script src="jscalc.js" type="text/javascript"></script>
         <link rel="stylesheet" href="style.css" media="screen" />
-        <script src="expand.js" type="text/javascript" type="text/javascript"></script>
+        <script src="expand.js" type="text/javascript"></script>
+        <script type="text/javascript"> window.onload = expand ;</script>
         <meta charset="UTF-8">
         <title></title>
     </head>
@@ -31,7 +32,7 @@
                             <span>.</span>
                             <span class="operator" onClick="input('/')">/</span> <br /><br /><br />
                             <div id="equals" onClick="input('=')">=</div>
-                            <div id="expand"><span onClick="expand()">Expand</span></div><br /><br /><br />
+                            <div id="expand"><span onClick="expand()">Expand</span></div><div id="shorten"><span onClick="expand()">Shorten</span></div><br /><br /><br />
 
                             <div id="breakline"></div>
                             <div id="extras">
