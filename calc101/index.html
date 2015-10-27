@@ -3,12 +3,14 @@
     <head lang="en">
         <script src="jscalc.js" type="text/javascript" type="text/javascript"></script>
         <link rel="stylesheet" href="style.css" media="screen" />
+        <script src="expand.js" type="text/javascript" type="text/javascript"></script>
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
         <div id="main_container">
             <form name="Calc">
+
                     <div id="inner_container">
                         <div id="screen"></div> <br /><br /><br />
                         <div id="button_container">
@@ -28,7 +30,36 @@
                             <span onClick="input(0)">0</span>
                             <span>.</span>
                             <span class="operator" onClick="input('/')">/</span> <br /><br /><br />
-                            <div id="equals" onClick="input('=')">=</div><br /><br /><br />
+                            <div id="equals" onClick="input('=')">=</div>
+                            <div id="expand"><span onClick="expand()">Expand</span></div><br /><br /><br />
+
+                            <div id="breakline"></div>
+                            <div id="extras">
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <br /><br />
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <br /><br />
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <br /><br />
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <br /><br />
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                                <span onClick="input()">x</span>
+                            </div>
                         </div>
                     </div>
 
