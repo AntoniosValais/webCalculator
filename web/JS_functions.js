@@ -3,7 +3,7 @@
  */
 function alertFunction()
 {
-    window.alert("HAI!");
+    window.alert("Hello!");
 }
 
 function writeFunction()
