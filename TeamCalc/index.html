@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <script src="jscalc.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="style.css" media="screen" />
+        <script src="expand.js" type="text/javascript"></script>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <div id="main_container">
+            <form name="Calc">
+
+                    <div id="inner_container">
+                        <div id="screen"></div> <br /><br /><br />
+                        <div id="button_container">
+                            <span onClick="input(this)">7</span>
+                            <span onClick="input(this)">8</span>
+                            <span onClick="input(this)">9</span>
+                            <span class="operator" onClick="input(this)">+</span>  <br /><br /><br />
+                            <span onClick="input(this)">4</span>
+                            <span onClick="input(this)">5</span>
+                            <span onClick="input(this)">6</span>
+                            <span class="operator" onClick="input(this)">-</span>     <br /><br /><br />
+                            <span onClick="input(this)">1</span>
+                            <span onClick="input(this)">2</span>
+                            <span onClick="input(this)">3</span>
+                            <span class="operator" onClick="input(this)">*</span>     <br /><br />
+                            <span onClick="clearAll()">C</span>
+                            <span onClick="input(this)">0</span>
+                            <span onClick="input(this)">.</span>
+                            <span class="operator" onClick="input(this)">/</span> <br /><br /><br />
+							<span onClick="input(this)"></span>
+							  <span onClick="input(this)"></span>
+							 <span onClick="input(this)">(</span>
+							  <span onClick="input(this)">)</span>				<br /><br /><br />
+                            <div id="equals" onClick="input(this)">=</div>
+                            <div id="expand"><span onClick="expand()">Expand</span></div><br /><br /><br />
+
+                            <div id="breakline"></div>
+                            <div id="extras">
+                                <span onClick="input(this)">pi</span>
+                                <span class="mathFunc" onClick="input(this)">ln</span>
+                                <span class="mathFunc" onClick="input(this)">mod</span>
+                                <span class="mathFunc" onClick="input(this)">cos</span>
+                                <br /><br />
+                                <span class="mathFunc" onClick="input(this)">acos</span>
+                                <span class="mathFunc" onClick="input(this)">cosh</span>
+                                <span class="mathFunc" onClick="input(this)">acosh</span>
+                                <span class="mathFunc" onClick="input(this)">sin</span>
+                                <br /><br />
+                                <span class="mathFunc" onClick="input(this)">asin</span>
+                                <span class="mathFunc" onClick="input(this)">sinh</span>
+                                <span class="mathFunc" onClick="input(this)">asinh</span>
+                                <span class="mathFunc" onClick="input(this)">tan</span>
+                                <br /><br />
+                                <span class="mathFunc" onClick="input(this)">atan</span>
+                                <span class="mathFunc" onClick="input(this)">tanh</span>
+                                <span class="mathFunc" onClick="input(this)">atanh</span>
+                                <span class="mathFunc" onClick="input(this)">cot</span>
+                                <br /><br />
+                                <span class="mathFunc" onClick="input(this)">sec</span>
+                                <span class="mathFunc" onClick="input(this)">asec</span>
+                                <span class="mathFunc" onClick="input(this)">csc</span>
+                                <span class="mathFunc" onClick="input(this)">acsc</span>
+                            </div>
+                        </div>
+                    </div>
+
+            </form>
+        </div>
+    </body>
+</html>
+
+
+
