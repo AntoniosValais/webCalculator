@@ -14,6 +14,7 @@ html{
     background-color:#2a508b;
     border: 4px solid #2a508b;
     border-radius: 5%;
+
 }
 #screen{
     float: left;
@@ -26,7 +27,6 @@ html{
     margin: 25px 25px 25px 25px;
     text-align:right;
     font-size: 30px;
-
 }
 #button_container span{
     float: left;
@@ -48,7 +48,7 @@ html{
     float: left;
     position: relative;
     cursor: pointer;
-    width: 185px;
+    width: 120px;
     height: 30px;
     background: #e1e1e1;
     border: solid 1px black;
@@ -58,16 +58,45 @@ html{
     color: #0791dd;
     line-height: 30px;
     text-align: center;
-    left: 15%;
-    visibility: hidden;
-
+    left: 20px;
+}
+#expand{
+    position:relative;
+    left: 58px; !important
 }
 #button_container{
     background-color:#2a508b;
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 5px;
+
 }
-#linebreak{
-    display: block;
+#button_container span:hover{
+    background: #b6b6b6;
+}
+#equals:hover{
+    background: #b6b6b6;
+}
+#button_container span:active{
+    top: 5px;
+    box-shadow: 0 0 rgba(0, 0, 0, 0.1);
+    background: #e3e88f;
+}
+#equals:active{
+    top:5px;
+    box-shadow: 0 0 rgba(0, 0, 0, 0.1);
+    background: #e3e88f;
+}
+
+#extras {
+    visibility: hidden;
+}
+#breakLine{
+    height: 1px;
+    width: 230px;
+    border-bottom: 3px solid greenyellow;
+    left: 25px;
+    margin-bottom: 10px;
+    position: relative;
+
 }
