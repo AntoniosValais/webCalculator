@@ -3,37 +3,65 @@
     <head lang="en">
         <script src="jscalc.js" type="text/javascript"></script>
         <link rel="stylesheet" href="style.css" media="screen" />
+        <script src="expand.js" type="text/javascript"></script>
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
         <div id="main_container">
-            <form name="calc">
-                <div id="buttons">
+            <form name="Calc">
 
-                    <div id="screen">
-                        <input id="view" type="text" name="view">
-                    </div> <br /><br /><br />
-                    <input class="buttons" type="button" name="one" value="1" onclick="getElement(1)">
-                    <input class="buttons" type="button" name="two" value="2" onclick="getElement(2)">
-                    <input class="buttons" type="button" name="three" value="3" onclick="getElement(3)">
-                    <input class="buttons" type="button" name="add" value="+" onclick="getElement('+')">
-                    <br>
-                    <input class="buttons" type="button" name="four" value="4" onclick="getElement(4)">
-                    <input class="buttons" type="button" name="five" value="5" onclick="getElement(5)">
-                    <input class="buttons" type="button" name="six" value="6" onclick="getElement(6)">
-                    <input class="buttons" type="button" name="sub" value="-" onclick="getElement('-')">
-                    <br>
-                    <input class="buttons" type="button" name="seven" value="7" onclick="getElement(7)">
-                    <input class="buttons" type="button" name="eight" value="8" onclick="getElement(8)">
-                    <input class="buttons" type="button" name="nine" value="9" onclick="getElement(9)">
-                    <input class="buttons" type="button" name="mult" value="*" onclick="getElement('*')">
-                    <br>
-                    <input class="buttons" type="button" name="clear" value="C" onclick="getElement('C')">
-                    <input class="buttons" type="button" name="zero" value="0" onclick="getElement(0)">
-                    <input class="buttons" type="button" name="outcome" value="=" onclick="getElement('=')">
-                    <input class="buttons" type="button" name="div" value="/" onclick="getElement('/')">
-                </div>
+                    <div id="inner_container">
+                        <div id="screen"></div> <br /><br /><br />
+                        <div id="button_container">
+                            <span onClick="input(this)">7</span>
+                            <span onClick="input(this)">8</span>
+                            <span onClick="input(this)">9</span>
+                            <span class="operator" onClick="input(this)">+</span>  <br /><br /><br />
+                            <span onClick="input(this)">4</span>
+                            <span onClick="input(this)">5</span>
+                            <span onClick="input(this)">6</span>
+                            <span class="operator" onClick="input(this)">-</span>     <br /><br /><br />
+                            <span onClick="input(this)">1</span>
+                            <span onClick="input(this)">2</span>
+                            <span onClick="input(this)">3</span>
+                            <span class="operator" onClick="input(this)">*</span>     <br /><br />
+                            <span onClick="clearAll()">C</span>
+                            <span onClick="input(this)">0</span>
+                            <span onClick="input(this)">.</span>
+                            <span class="operator" onClick="input(this)">/</span> <br /><br /><br />
+                            <div id="equals" onClick="input(this)">=</div>
+                            <div id="expand"><span onClick="expand()">Expand</span></div><br /><br /><br />
+
+                            <div id="breakline"></div>
+                            <div id="extras">
+                                <span onClick="input(this)">Pi</span>
+                                <span onClick="input(this)">ln</span>
+                                <span onClick="input(this)">mod</span>
+                                <span onClick="input(this)">cos</span>
+                                <br /><br />
+                                <span onClick="input(this)">acos</span>
+                                <span onClick="input(this)">cosh</span>
+                                <span onClick="input(this)">acosh</span>
+                                <span onClick="input(this)">sin</span>
+                                <br /><br />
+                                <span onClick="input(this)">asin</span>
+                                <span onClick="input(this)">sinh</span>
+                                <span onClick="input(this)">asinh</span>
+                                <span onClick="input(this)">tan</span>
+                                <br /><br />
+                                <span onClick="input(this)">atan</span>
+                                <span onClick="input(this)">tanh</span>
+                                <span onClick="input(this)">atanh</span>
+                                <span onClick="input(this)">cot</span>
+                                <br /><br />
+                                <span onClick="input(this)">sec</span>
+                                <span onClick="input(this)">asec</span>
+                                <span onClick="input(this)">csc</span>
+                                <span onClick="input(this)">acsc</span>
+                            </div>
+                        </div>
+                    </div>
 
             </form>
         </div>

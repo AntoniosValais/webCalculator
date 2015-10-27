@@ -1,11 +1,19 @@
-var result;
-function getElement(x){
-    document.calc.view.value += x;
-    result = result + x;
-    if(x == 'C') {
-        document.calc.view.value = '';
+var  prod = [];
+
+function input(elements) {
+    var  newInputs = elements.innerHTML;
+    var  currentProd = prod;
+
+    prod.push(newInputs);
+    prod = funckChecker(currentProd);
+    var result = "";
+    for (var i = 0; i < prod.length; i++){
+        result += prod[i];
     }
-    else if(x == '=') {
-        document.calc.view.value = eval();
-    }
+    document.getElementById("screen").innerHTML = result;
+}
+
+function clearAll() {
+    document.getElementById("screen").innerHTML = "";
+    prod = [];
 }
