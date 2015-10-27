@@ -39,14 +39,21 @@ function funckChecker(inputArray){
 	{
 		if(lastInput === funcButtons[i].innerHTML)
 		{
-			if(inputArray[inputArray.length-2] === "(")
-			{
+			if(inputArray.length === 1)
+			{	//an sinartisi einai to proto input pou dothike
 				inputArray[inputArray.length-1] = lastInput+"(";
-			}else{
-				inputArray.pop();
-				inputArray.unshift(lastInput+"(");
+			}else{	
+					if(inputArray[inputArray.length-2].match(/[^0-9\)]/))
+					{	//an prin tin sinartisi einai otidipote ekstos apo arithmous
+						//kai ) tote kane append tin sinartisi
+						inputArray[inputArray.length-1] = lastInput+"(";
+					}else{
+						//allios pane tin sinartisi stin arxi kai kleise parenthesi
+						inputArray.pop();
+						inputArray.unshift(lastInput+"(");
+						inputArray.push(")");
+					}
 			}
-			
 		}
 	}
 	
