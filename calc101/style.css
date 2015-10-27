@@ -96,7 +96,7 @@ html{
 #extras {
     display: none;
 }
-#breakline{
+#breakLine{
     height: 1px;
     width: 230px;
     border-bottom: 3px solid greenyellow;
