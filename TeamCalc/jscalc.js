@@ -7,7 +7,7 @@ function input(elements)
 
     if( newInputs == '=')
     {
-        var result = math.eval( currentProd.join(" "));
+        var result = math.eval( currentProd.join(""));
         document.getElementById("screen").innerHTML = result;
         return;
     }
