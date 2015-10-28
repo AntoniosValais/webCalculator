@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <script src="jscalc.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="style.css" media="screen" />
+        <script src="expand.js" type="text/javascript"></script>
+        <script type="text/javascript"> window.onload = expand ;</script>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <div id="main_container">
+            <form name="Calc">
+
+                    <div id="inner_container">
+                        <div id="screen"></div> <br /><br /><br />
+                        <div id="button_container">
+                            <span onClick="input(7)">7</span>
+                            <span onClick="input(8)">8</span>
+                            <span onClick="input(9)">9</span>
+                            <span class="operator" onClick="input('+')">+</span>  <br /><br /><br />
+                            <span onClick="input(4)">4</span>
+                            <span onClick="input(5)">5</span>
+                            <span onClick="input(6)">6</span>
+                            <span class="operator" onClick="input('-')">-</span>     <br /><br />
+                            <span onClick="input(1)">1</span>
+                            <span onClick="input(2)">2</span>
+                            <span onClick="input(3)">3</span>
+                            <span class="operator" onClick="input('*')">*</span>     <br /><br />
+                            <span class="clear" onClick="input('C')">C</span>
+                            <span onClick="input(0)">0</span>
+                            <span>.</span>
+                            <span class="operator" onClick="input('/')">/</span> <br /><br /><br />
+                            <div id="equals" onClick="input('=')">=</div>
+                            <div id="expand"><span onClick="expand()">Expand</span></div><div id="shorten"><span onClick="expand()">Shorten</span></div><br /><br /><br />
+
+                            <div id="breakLine"></div>
+                            <div id="extras">
+                                <span onClick="input()">n!</span>
+                                <span onClick="input()">sqrt</span>
+                                <span onClick="input()">log</span>
+                                <span onClick="input()">ln</span>
+                                <br /><br />
+                                <span onClick="input()">sin</span>
+                                <span onClick="input()">cos</span>
+                                <span onClick="input()">tan</span>
+                                <span onClick="input()">hyp</span>
+                                <br /><br />
+                                <span onClick="input()">sin^(-1)</span>
+                                <span onClick="input()">cos^(-1)</span>
+                                <span onClick="input()">tan^(-1)</span>
+                                <span onClick="input()">π</span>
+                                <br /><br />
+                                <span onClick="input()">(x)^(-1)</span>
+                                <span onClick="input()">a^(b/c)</span>
+                                <span onClick="input()">x^2</span>
+                                <span onClick="input()">x^3</span>
+                                <br /><br />
+
+                            </div>
+                        </div>
+                    </div>
+
+            </form>
+        </div>
+    </body>
+</html>
+
+
+
