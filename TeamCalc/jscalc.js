@@ -16,7 +16,9 @@ function CalculatorController()
         {
             try
             {
-                this.result = math.eval( this.prod.join(""));
+                this.result = math.eval( this.prod.join("") );
+                this.prod = [];
+                this.prod = this.result.toString().split("");
                 this.checkIfScreenSizeNeedsToExpand();
                 document.getElementById("screen").innerHTML = this.result.toString();
             }
