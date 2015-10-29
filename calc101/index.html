@@ -1,66 +1,80 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
+        <script src="math.js" type="text/javascript"></script>
         <script src="jscalc.js" type="text/javascript"></script>
         <link rel="stylesheet" href="style.css" media="screen" />
         <script src="expand.js" type="text/javascript"></script>
-        <script type="text/javascript"> window.onload = expand ;</script>
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
         <div id="main_container">
-            <form name="Calc">
-
                     <div id="inner_container">
-                        <div id="screen"></div> <br /><br /><br />
                         <div id="button_container">
-                            <span onClick="input(7)">7</span>
-                            <span onClick="input(8)">8</span>
-                            <span onClick="input(9)">9</span>
-                            <span class="operator" onClick="input('+')">+</span>  <br /><br /><br />
-                            <span onClick="input(4)">4</span>
-                            <span onClick="input(5)">5</span>
-                            <span onClick="input(6)">6</span>
-                            <span class="operator" onClick="input('-')">-</span>     <br /><br />
-                            <span onClick="input(1)">1</span>
-                            <span onClick="input(2)">2</span>
-                            <span onClick="input(3)">3</span>
-                            <span class="operator" onClick="input('*')">*</span>     <br /><br />
-                            <span class="clear" onClick="input('C')">C</span>
-                            <span onClick="input(0)">0</span>
-                            <span>.</span>
-                            <span class="operator" onClick="input('/')">/</span> <br /><br /><br />
-                            <div id="equals" onClick="input('=')">=</div>
-                            <div id="expand"><span onClick="expand()">Expand</span></div><div id="shorten"><span onClick="expand()">Shorten</span></div><br /><br /><br />
-
+                        <div id="screen"></div>
+                            <br /><br /><br /><br />
+                            <span title="7" onClick="controller.receiveInputFrom(this)">7</span>
+                            <span title="8" onClick="controller.receiveInputFrom(this)">8</span>
+                            <span title="9" onClick="controller.receiveInputFrom(this)">9</span>
+                            <span title="+" class="operator" onClick="controller.receiveInputFrom(this)">+</span>
+                            <br /><br /><br />
+                            <span title="4" onClick="controller.receiveInputFrom(this)">4</span>
+                            <span title="5" onClick="controller.receiveInputFrom(this)">5</span>
+                            <span title="6" onClick="controller.receiveInputFrom(this)">6</span>
+                            <span title="-" class="operator" onClick="controller.receiveInputFrom(this)">-</span>
+                            <br /><br /><br />
+                            <span title="1" onClick="controller.receiveInputFrom(this)">1</span>
+                            <span title="2" onClick="controller.receiveInputFrom(this)">2</span>
+                            <span title="3" onClick="controller.receiveInputFrom(this)">3</span>
+                            <span title="*" class="operator" onClick="controller.receiveInputFrom(this)">*</span>
+                            <br /><br /><br />
+                            <span title="(" onClick="controller.receiveInputFrom(this)">(</span>
+                            <span title="0" onClick="controller.receiveInputFrom(this)">0</span>
+                            <span title="." onClick="controller.receiveInputFrom(this)">.</span>
+                            <span title="/" class="operator" onClick="controller.receiveInputFrom(this)">/</span>
+                            <br /><br /><br />
+                            <span title=")" onClick="controller.receiveInputFrom(this)">)</span>
+                            <span class="clear" title="C" onClick="controller.clearAll()">C</span>
+                            <div  title="=" id="equals" onClick="controller.receiveInputFrom(this)">=</div>
+                            <div id="expand"><span onClick="expand()">Expand</span></div>
+                            <div id="shorten"><span onClick="expand()">Shorten</span></div>
+                            <br /><br /><br />
                             <div id="breakLine"></div>
                             <div id="extras">
-                                <span onClick="input()">n!</span>
-                                <span onClick="input()">sqrt</span>
-                                <span onClick="input()">log</span>
-                                <span onClick="input()">ln</span>
-                                <br /><br />
-                                <span onClick="input()">sin</span>
-                                <span onClick="input()">cos</span>
-                                <span onClick="input()">tan</span>
-                                <span onClick="input()">hyp</span>
-                                <br /><br />
-                                <span onClick="input()">sin^(-1)</span>
-                                <span onClick="input()">cos^(-1)</span>
-                                <span onClick="input()">tan^(-1)</span>
-                                <span onClick="input()">π</span>
-                                <br /><br />
-                                <span onClick="input()">(x)^(-1)</span>
-                                <span onClick="input()">a^(b/c)</span>
-                                <span onClick="input()">x^2</span>
-                                <span onClick="input()">x^3</span>
-                                <br /><br />
+                                <span title="^" onClick="controller.receiveInputFrom(this)">^</span>
+                                <span title="%" onClick="controller.receiveInputFrom(this)">%</span>
+                                <span title="!" onClick="controller.receiveInputFrom(this)">n!</span>
+                                <span title="pi" onClick="controller.receiveInputFrom(this)">π</span>
+                                <br/><br/><br />
+                                <span class="mathFunc" title="sqrt" onClick="controller.receiveInputFrom(this)">sqrt</span>
+                                <span class="mathFunc" title="log10" onClick="controller.receiveInputFrom(this)">log10</span>
+                                <span class="mathFunc" title="log" onClick="controller.receiveInputFrom(this)">ln</span>
+                                <span class="mathFunc" title="1/" onClick="controller.receiveInputFrom(this)">1/x</span>
+                                <br /><br /><br />
+                                <span class="mathFunc" title="sin" onClick="controller.receiveInputFrom(this)">sin</span>
+                                <span class="mathFunc" title="cos" onClick="controller.receiveInputFrom(this)">cos</span>
+                                <span class="mathFunc" title="tan" onClick="controller.receiveInputFrom(this)">tan</span>
+                                <span class="mathFunc" title="tanh" onClick="controller.receiveInputFrom(this)">tanh</span>
+                                <br /><br /><br />
+                                <span class="mathFunc" title="asin" onClick="controller.receiveInputFrom(this)">asin</span>
+                                <span class="mathFunc" title="acos" onClick="controller.receiveInputFrom(this)">acos</span>
+                                <span class="mathFunc" title="atan" onClick="controller.receiveInputFrom(this)">atan</span>
+                                <span class="mathFunc" title="atanh" onClick="controller.receiveInputFrom(this)">atanh</span>
+                                <br /><br /><br />
+                                <span class="mathFunc" title="asinh" onClick="controller.receiveInputFrom(this)">asinh</span>
+                                <span class="mathFunc" title="acosh" onClick="controller.receiveInputFrom(this)">acosh</span>
+                                <span class="mathFunc" title="cot" onClick="controller.receiveInputFrom(this)">cot</span>
+                                <span class="mathFunc" title="sec" onClick="controller.receiveInputFrom(this)">sec</span>
+                                <br /><br /><br />
+                                <span class="mathFunc" title="csc" onClick="controller.receiveInputFrom(this)">csc</span>
+                                <span class="mathFunc" title="acsc" onClick="controller.receiveInputFrom(this)">acsc</span>
+                                <span class="mathFunc" title="acot" onClick="controller.receiveInputFrom(this)">acot</span>
+                                <span class="mathFunc" title="asec" onClick="controller.receiveInputFrom(this)">asec</span>
+                                <br/><br/><br/>
                             </div>
                         </div>
                     </div>
-
-            </form>
         </div>
     </body>
 </html>
