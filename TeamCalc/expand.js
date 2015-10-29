@@ -7,8 +7,8 @@ var expand = function() {
     var status = getComputedStyle(yourDiv).getPropertyValue("display");
     if(status == "none"){
         document.getElementById("extras").style.display = "block";
-        document.getElementById("main_container").style.height = "750px";
-        document.getElementById("button_container").style.height = "680px";
+        document.getElementById("main_container").style.height = "820px";
+        document.getElementById("button_container").style.height = "750px";
         document.getElementById("breakLine").style.display = "block";
         document.getElementById("expand").style.display = "none";
         document.getElementById("shorten").style.display = "block";

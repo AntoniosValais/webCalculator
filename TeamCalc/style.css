@@ -11,7 +11,7 @@ html{
     border: 3px groove #2a508b;
     border-radius: 25px;
     background-color: #77c3ce;
-    height: 410px;
+    height: 450px;
     width: 500px;
 }
 #inner_container{
@@ -38,7 +38,7 @@ html{
 #button_container {
     border: 2px inset green;
     width: 440px;
-    height: 340px;
+    height: 370px;
     position: fixed;
     border-radius: 5px;
     padding-top: 15px;
