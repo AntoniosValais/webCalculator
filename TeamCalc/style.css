@@ -1,0 +1,117 @@
+html{
+    background-color: grey;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+#main_container{
+    position: fixed;
+    top:7%;
+    left: 5%;
+    border: 3px groove #2a508b;
+    border-radius: 25px;
+    background-color: #77c3ce;
+    height: 450px;
+    width: 500px;
+}
+#inner_container{
+    border-radius: 5%;
+    width: 440px;
+    height: 250px;
+    margin: 25px;
+    background-color: #2a508b;
+}
+#screen{
+    float: left;
+    position: relative;
+    width: 390px;
+    height: 38px;
+    background-color: #68bdab;
+    border: 2px inset green;
+    border-radius: 5px;
+    text-align:right;
+    font-size: 30px;
+    box-shadow: inset 0 4px rgba(0, 0, 0, 0.2);
+    left: 20px;
+    top: 10px;
+}
+#button_container {
+    border: 2px inset green;
+    width: 440px;
+    height: 370px;
+    position: fixed;
+    border-radius: 5px;
+    padding-top: 15px;
+    margin-bottom: 5px;
+    background-color: #2a508b;
+}
+#button_container span{
+    float: left;
+    position: relative;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    background: #e1e1e1;
+    border: solid 1px black;
+    border-radius: 5px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    margin: 0 0 0 20px;
+    color: #0791dd;
+    line-height: 30px;
+    text-align: center;
+    left: 22px;
+}
+#button_container span.operator, #button_container span.clear{
+    background-color: lightgoldenrodyellow;
+}
+#equals{
+    float: left;
+    position: relative;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    background: lightpink;
+    border: solid 1px black;
+    border-radius: 5px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    margin: 0 0 10px 20px;
+    color: #0791dd;
+    line-height: 30px;
+    text-align: center;
+    left: 22px;
+}
+#expand{
+    position:relative;
+}
+#shorten{
+    position:relative;
+    display: none;
+}
+#button_container span:hover{
+    background: #b6b6b6;
+}
+#equals:hover{
+    background: #b6b6b6;
+}
+#button_container span:active{
+    top: 5px;
+    box-shadow: 0 0 rgba(0, 0, 0, 0.1);
+    background: #e3e88f;
+}
+#equals:active{
+    top:5px;
+    box-shadow: 0 0 rgba(0, 0, 0, 0.1);
+    background: #e3e88f;
+}
+#extras {
+    display: none;
+}
+#breakLine{
+    height: 1px;
+    width: 330px;
+    border-bottom: 3px inset greenyellow;
+    left: 50px;
+    margin-bottom: 15px;
+    position: relative;
+    display:none;
+}
