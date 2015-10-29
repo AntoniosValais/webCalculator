@@ -5,6 +5,8 @@ function CalculatorController()
     this.prod = [];
     this.newInput = null;
     this.result = 0;
+    this.firstCalculatorScreenCharacterSizeLimit = 14;
+    this.totalCalculatorScreenCharacterSizeLimit = 22;
 
     this.receiveInputFrom = function receiveInputFrom( element )
     {
@@ -15,14 +17,23 @@ function CalculatorController()
             try
             {
                 this.result = math.eval( this.prod.join(""));
+                this.checkIfScreenSizeNeedsToExpand();
                 document.getElementById("screen").innerHTML = this.result.toString();
             }
             catch(e)
             {
+                this.checkIfScreenSizeNeedsToExpand();
                 document.getElementById("screen").innerHTML = "Expression Error!!!";
             }
             return;
         }
+
+        if( this.prod.join("").length > this.totalCalculatorScreenCharacterSizeLimit )
+        {
+            return;
+        }
+
+        this.checkIfScreenSizeNeedsToExpand();
 
         this.prod.push( this.newInput );
 
@@ -35,8 +46,8 @@ function CalculatorController()
             this.result += this.prod[i];
         }
 
-        document.getElementById("screen").innerHTML = this.result;
-    }
+        document.getElementById("screen").innerHTML = this.result.toString();
+    };
 
     /*
      Made by Tania
@@ -76,16 +87,37 @@ function CalculatorController()
                 }
             }
         }
-    }
+    };
 
     this.clearAll = function clearAll()
     {
         document.getElementById("screen").innerHTML = "";
         this.prod = [];
-    }
+        this.checkIfScreenSizeNeedsToExpand();
+    };
+
+    this.reduceScreenCharacterFontSize = function reduceScreenCharacterFontSize()
+    {
+        document.getElementById("screen").style.fontSize = "20px";
+    };
+
+    this.restoreScreenCharacterFontSize = function restoreScreenCharacterFontSize()
+    {
+        document.getElementById("screen").style.fontSize = "30px";
+    };
+
+    this.checkIfScreenSizeNeedsToExpand = function checkIfScreenSizeNeedsToExpand()
+    {
+        if( this.prod.join("").length > this.firstCalculatorScreenCharacterSizeLimit )
+        {
+            this.reduceScreenCharacterFontSize();
+        }
+        else
+        {
+            this.restoreScreenCharacterFontSize();
+        }
+    };
 }
-
-
 /*
 function input(elements)
 {
