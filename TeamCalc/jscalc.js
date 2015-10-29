@@ -5,8 +5,8 @@ function CalculatorController()
     this.prod = [];
     this.newInput = null;
     this.result = 0;
-    this.firstCalculatorScreenCharacterSizeLimit = 14;
-    this.totalCalculatorScreenCharacterSizeLimit = 22;
+    this.firstCalculatorScreenCharacterSizeLimit = 24;
+    this.totalCalculatorScreenCharacterSizeLimit = 38;
 
     this.receiveInputFrom = function receiveInputFrom( element )
     {
